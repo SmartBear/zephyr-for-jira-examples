@@ -16,7 +16,7 @@ pytest --junitxml=output/junitxml_report.xml
 
 The command line above will execute the pytest tests and generate the JUnit XML results file `output/junitxml_report.xml`. Then, this file containing the test results can be uploaded to Zephyr Scale using the following API endpoint: [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions) and to Zephyr Squad using the following API endpoint: [`POST /automations/executions/junit`](https://smartbear.portal.swaggerhub.com/zephyr-squad/default/zephyr-zquad-cloud-api-2#/Automations/createJUnitExecutions).
 
-The abovementioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr Scale or Zephyr Squad containing the results and will respond with the key of the created test cycle.
+The above mentioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr Scale or Zephyr Squad containing the results and will respond with the key of the created test cycle.
 
 ### Naming conventions
 
