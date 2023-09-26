@@ -4,7 +4,7 @@ This is an example project on how to use the integration of Zephyr Scale and Zep
 
 ## Executing tests and uploading results to Zephyr Scale or Zephyr Squad 
 
-The script `script.sh` generates the JUnit XML results files, zip them together and upload them using [Zephyr Scale API](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions) or [Zephyr Squad API](https://smartbear.portal.swaggerhub.com/zephyr-squad/default/zephyr-zquad-cloud-api-2#/Automations/createJUnitExecutions).
+The script `script.sh` generates the JUnit XML results files, zip them together and uploads to Zephyr Scale using the following API endpoint: [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions) or to Zephyr Squad using the following API endpoint: [`POST /automations/executions/junit`](https://smartbear.portal.swaggerhub.com/zephyr-squad/default/zephyr-zquad-cloud-api-2#/Automations/createJUnitExecutions).
 The above mentioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr Scale or Zephyr Squad containing the results and will respond with the key of the created test cycle.
 To run the script, execute the following command in bash shell providing the Jira project key as the first parameter and Public REST API token as the second one:
 
