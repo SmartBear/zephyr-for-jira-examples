@@ -1,0 +1,9 @@
+.idea
+.gradle
+*.iml
+.DS_Store
+build/
+src/generated/java
+.base-url
+.test-base-url
+out/

@@ -1,0 +1,119 @@
+{
+  "version" : 1,
+  "executions" : [ {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorDivideTest.notMappedToTestCaseAndFailWithACustomName",
+    "result" : "Failed",
+    "testCase" : {
+      "name" : "Test with custom name fails"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorDivideTest.notMappedToTestCaseAndFail",
+    "result" : "Failed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorDivideTest.notMappedToTestCaseAndPass",
+    "result" : "Passed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorDivideTest.divideTwoNumbersAndFail",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T4"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorDivideTest.divideTwoNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T3"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumWithParameterizedTest.sumNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T12"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractWithParameterizedTest.subtractNumbersAndFail",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T9"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumTest.anotherResultForTheSamePreviousTestCase",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T11"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumTest.notMappedToTestCaseAndFail",
+    "result" : "Failed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumTest.notMappedToTestCaseAndPass",
+    "result" : "Passed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumTest.sumTwoNumbersAndFail",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T11"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSumTest.sumTwoNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T10"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyWithParameterizedTest.multiplyNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "name" : "Parameterized Test with custom name pass"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyTest.multiplyTwoNumbersAndFail",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T6"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyTest.multiplyTwoNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T5"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyTest.notMappedToTestCaseAndFail",
+    "result" : "Failed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyTest.notMappedToTestCaseAndPass",
+    "result" : "Passed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorMultiplyTest.notMappedToTestCaseAndPassWithACustomName",
+    "result" : "Passed",
+    "testCase" : {
+      "name" : "Test with custom name pass"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractTest.subtractTwoNumbersAndFail",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T8"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractTest.subtractTwoNumbersAndPass",
+    "result" : "Passed",
+    "testCase" : {
+      "key" : "WEB-T7"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractTest.mappedWithBothTestCaseKeyAndTestCaseNameFails",
+    "result" : "Failed",
+    "testCase" : {
+      "key" : "WEB-T9",
+      "name" : "Mapped with both testCaseKey and testCaseName and fails"
+    }
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractTest.notMappedToTestCaseAndFail",
+    "result" : "Failed"
+  }, {
+    "source" : "com.smartbear.zephyrscale.junitexample.CalculatorSubtractTest.notMappedToTestCaseAndPass",
+    "result" : "Passed"
+  } ]
+}

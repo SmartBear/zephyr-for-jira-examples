@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+    <testsuite errors="0" failures="6" hostname="SB-PL-76TMD6M" name="pytest" skipped="6" tests="23" time="0.137"
+               timestamp="2021-03-04T11:45:21.387853">
+        <testcase classname="tests.test_ignored.TestIgnoredClass" name="test_method1_DEV_T40" time="0.001">
+            <skipped message="no way of currently testing this" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_ignored.py:6: no way of currently
+                testing this
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_ignored.TestIgnoredClass" name="test_method3_DEV_T41" time="0.000">
+            <skipped message="no way of currently testing this" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_ignored.py:9: no way of currently
+                testing this
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T30[3+5-8]" time="0.001"/>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T30[2+4-7]" time="0.002">
+            <failure message="AssertionError: assert 6 == 7&#10; +  where 6 = eval('2+4')">test_input = '2+4', expected
+                = 7
+
+                @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+                def test_parametrized_DEV_T30(test_input, expected):
+                &gt; assert eval(test_input) == expected
+                E AssertionError: assert 6 == 7
+                E + where 6 = eval('2+4')
+
+                tests/test_parametrized.py:6: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T30[6*9-42]" time="0.001">
+            <failure message="AssertionError: assert 54 == 42&#10; +  where 54 = eval('6*9')">test_input = '6*9',
+                expected = 42
+
+                @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+                def test_parametrized_DEV_T30(test_input, expected):
+                &gt; assert eval(test_input) == expected
+                E AssertionError: assert 54 == 42
+                E + where 54 = eval('6*9')
+
+                tests/test_parametrized.py:6: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized[3+5-8]" time="0.001"/>
+        <testcase classname="tests.test_parametrized" name="test_parametrized[2+4-7]" time="0.001">
+            <failure message="AssertionError: assert 6 == 7&#10; +  where 6 = eval('2+4')">test_input = '2+4', expected
+                = 7
+
+                @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+                def test_parametrized(test_input, expected):
+                &gt; assert eval(test_input) == expected
+                E AssertionError: assert 6 == 7
+                E + where 6 = eval('2+4')
+
+                tests/test_parametrized.py:10: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized[6*9-42]" time="0.001">
+            <failure message="AssertionError: assert 54 == 42&#10; +  where 54 = eval('6*9')">test_input = '6*9',
+                expected = 42
+
+                @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+                def test_parametrized(test_input, expected):
+                &gt; assert eval(test_input) == expected
+                E AssertionError: assert 54 == 42
+                E + where 54 = eval('6*9')
+
+                tests/test_parametrized.py:10: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T32[3+5-8]" time="0.000">
+            <skipped message="require further analysis" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_parametrized.py:13: require
+                further analysis
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T32[2+4-6]" time="0.000">
+            <skipped message="require further analysis" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_parametrized.py:13: require
+                further analysis
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_parametrized" name="test_parametrized_DEV_T32[6*9-42]" time="0.000">
+            <skipped message="require further analysis" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_parametrized.py:13: require
+                further analysis
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_parametrized.TestParametrizedClass"
+                  name="test_parametrized_in_class_DEV_T35[3+5-8]" time="0.001"/>
+        <testcase classname="tests.test_parametrized.TestParametrizedClass"
+                  name="test_parametrized_in_class_DEV_T35[2+4-6]" time="0.001"/>
+        <testcase classname="tests.test_parametrized.TestParametrizedClass"
+                  name="test_parametrized_in_class_DEV_T35[6*9-42]" time="0.001">
+            <failure message="AssertionError: assert 54 == 42&#10; +  where 54 = eval('6*9')">self = &lt;test_parametrized.TestParametrizedClass
+                object at 0x110baad30&gt;, test_input = '6*9', expected = 42
+
+                @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 6), ('6*9', 42)])
+                def test_parametrized_in_class_DEV_T35(self, test_input, expected):
+                &gt; assert eval(test_input) == expected
+                E AssertionError: assert 54 == 42
+                E + where 54 = eval('6*9')
+
+                tests/test_parametrized.py:23: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_sample.TestClass" name="test_method_1_DEV_T19" time="0.001"/>
+        <testcase classname="tests.test_sample.TestClass" name="test_method_2_DEV_T20" time="0.000">
+            <skipped message="no way of currently testing this" type="pytest.skip">
+                /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example/tests/test_sample.py:8: no way of currently
+                testing this
+            </skipped>
+        </testcase>
+        <testcase classname="tests.test_sample.TestClass" name="test_method_3_DEV_T21" time="0.000"/>
+        <testcase classname="tests.test_sample.TestClass" name="test_method" time="0.000"/>
+        <testcase classname="tests.test_sample" name="test_method_1_without_class" time="0.001"/>
+        <testcase classname="tests.test_sample" name="test_method_2_without_class_DEV_T24" time="0.001">
+            <failure message="assert 1 == 0">def test_method_2_without_class_DEV_T24():
+                &gt; assert 1 == 0
+                E assert 1 == 0
+
+                tests/test_sample.py:26: AssertionError
+            </failure>
+        </testcase>
+        <testcase classname="tests.test_sample_with_unittest.TestStringMethods" name="test_isupper_DEV_124"
+                  time="0.001"/>
+        <testcase classname="tests.test_sample_with_unittest.TestStringMethods" name="test_split_DEV_125" time="0.000"/>
+        <testcase classname="tests.test_sample_with_unittest.TestStringMethods" name="test_upper_DEV_123" time="0.001"/>
+    </testsuite>
+</testsuites>

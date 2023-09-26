@@ -1,0 +1,82 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.6.0, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
+rootdir: /Users/Alicja.Majewska/Projects/zephyr-scale-pytest-example, configfile: pytest.ini
+collected 23 items
+
+tests/test_ignored.py ss                                                 [  8%]
+tests/test_parametrized.py .FF.FFsss..F                                  [ 60%]
+tests/test_sample.py .s...F                                              [ 86%]
+tests/test_sample_with_unittest.py ...                                   [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_parametrized_DEV_T30[2+4-7] _______________________
+
+test_input = '2+4', expected = 7
+
+    @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+    def test_parametrized_DEV_T30(test_input, expected):
+>       assert eval(test_input) == expected
+E       AssertionError: assert 6 == 7
+E        +  where 6 = eval('2+4')
+
+tests/test_parametrized.py:6: AssertionError
+______________________ test_parametrized_DEV_T30[6*9-42] _______________________
+
+test_input = '6*9', expected = 42
+
+    @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+    def test_parametrized_DEV_T30(test_input, expected):
+>       assert eval(test_input) == expected
+E       AssertionError: assert 54 == 42
+E        +  where 54 = eval('6*9')
+
+tests/test_parametrized.py:6: AssertionError
+___________________________ test_parametrized[2+4-7] ___________________________
+
+test_input = '2+4', expected = 7
+
+    @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+    def test_parametrized(test_input, expected):
+>       assert eval(test_input) == expected
+E       AssertionError: assert 6 == 7
+E        +  where 6 = eval('2+4')
+
+tests/test_parametrized.py:10: AssertionError
+__________________________ test_parametrized[6*9-42] ___________________________
+
+test_input = '6*9', expected = 42
+
+    @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 7), ('6*9', 42)])
+    def test_parametrized(test_input, expected):
+>       assert eval(test_input) == expected
+E       AssertionError: assert 54 == 42
+E        +  where 54 = eval('6*9')
+
+tests/test_parametrized.py:10: AssertionError
+_______ TestParametrizedClass.test_parametrized_in_class_DEV_T35[6*9-42] _______
+
+self = <test_parametrized.TestParametrizedClass object at 0x10a4045c0>
+test_input = '6*9', expected = 42
+
+    @pytest.mark.parametrize('test_input,expected', [('3+5', 8), ('2+4', 6), ('6*9', 42)])
+    def test_parametrized_in_class_DEV_T35(self, test_input, expected):
+>       assert eval(test_input) == expected
+E       AssertionError: assert 54 == 42
+E        +  where 54 = eval('6*9')
+
+tests/test_parametrized.py:23: AssertionError
+_____________________ test_method_2_without_class_DEV_T24 ______________________
+
+    def test_method_2_without_class_DEV_T24():
+>       assert 1 == 0
+E       assert 1 == 0
+
+tests/test_sample.py:26: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_parametrized.py::test_parametrized_DEV_T30[2+4-7] - Asserti...
+FAILED tests/test_parametrized.py::test_parametrized_DEV_T30[6*9-42] - Assert...
+FAILED tests/test_parametrized.py::test_parametrized[2+4-7] - AssertionError:...
+FAILED tests/test_parametrized.py::test_parametrized[6*9-42] - AssertionError...
+FAILED tests/test_parametrized.py::TestParametrizedClass::test_parametrized_in_class_DEV_T35[6*9-42]
+FAILED tests/test_sample.py::test_method_2_without_class_DEV_T24 - assert 1 == 0
+=================== 6 failed, 11 passed, 6 skipped in 0.10s ====================

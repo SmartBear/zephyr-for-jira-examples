@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Calculator" tests="3" errors="0" failures="1" skipped="0" time="0.042">
+   <testcase classname="Calculator" name="User can clear the display" time="0.003" />
+   <testcase classname="Calculator" name="NET-T1744 User can calculate with wrong result" time="0.003">
+      <failure message="Expected result to be '3' but was '2'." type="AssertionError" />
+   </testcase>
+   <testcase classname="Calculator" name="User can calculate two numbers - NET-T1744" time="0.009" />
+</testsuite>

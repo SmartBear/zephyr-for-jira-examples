@@ -1,0 +1,8 @@
+*.iml
+.idea/*
+!.idea/codeStyleSettings.xml
+target
+.DS_STORE
+.classpath
+.project
+.settings/
