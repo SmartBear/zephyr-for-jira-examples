@@ -1,6 +1,6 @@
 # TestNG Integration Example
 
-This is an example project that demonstrates how to configrue TestNG to generate the JUnit XML results file required for uploading test results to Zephyr Scale or Zephyr Squad.
+This is an example project that demonstrates how to configrue TestNG to generate the JUnit XML results file required for uploading test results to Zephyr or Zephyr Essential.
 
 ## Configuration
 
@@ -48,19 +48,19 @@ test {
 </build>
 ```
 
-## Executing tests and uploading results to Zephyr Scale or Zephyr Squad
+## Executing tests and uploading results to Zephyr
 To execute tests using this example project all that is required is to use Gradle in the root folder from the terminal:
 
 `./gradlew test`
 
 ...or run the Gradle task `test` from your IDE.
 
-The command above will execute the TestNG tests and generate a JUnit XML results file. Then, this file containing the test results can be uploaded to Zephyr Scale using the following API endpoint: [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions) or to Zephyr Squad using the following API endpoint: [`POST /automations/executions/junit`](https://smartbear.portal.swaggerhub.com/zephyr-squad/default/zephyr-zquad-cloud-api-2#/Automations/createJUnitExecutions).
+The command above will execute the TestNG tests and generate a JUnit XML results file. Then, this file containing the test results can be uploaded to Zephyr using the following API endpoint: [`POST /automations/executions/junit`](https://support.smartbear.com/zephyr-scale-cloud/api-docs/#operation/createJUnitExecutions) or to Zephyr Essential using the following API endpoint: [`POST /automations/executions/junit`](https://smartbear.portal.swaggerhub.com/zephyr-squad/default/zephyr-zquad-cloud-api-2#/Automations/createJUnitExecutions).
 
-The abovementioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr Scale or Zephyr Squad containing the results and will respond with the key of the created test cycle.
+The abovementioned API accepts either a single XML file as well as a .zip file containing multiple XML files. The POST request will create a new test cycle in Zephyr containing the results and will respond with the key of the created test cycle.
 
 ## Naming conventions
-Test cases in Zephyr Scale or Zephyr Squad will be matched by the full class name and test name or test case key if a method starts or ends with it. Find below an example:
+Test cases in Zephyr will be matched by the full class name and test name or test case key if a method starts or ends with it. Find below an example:
 ```
 public class ExemplaryTest {
 
@@ -89,5 +89,5 @@ In order to execute tests in the example on your local machine you’ll have to 
 
 ## Considerations:
 - Tests and classes marked with `@Ignore` annotation are not taken into consideration by the framework when it comes to generating output file - as a result, the test cases linked to those tests won't be present in the test cycle created by the endpoint. 
-- Tests that depends on a failing tests (e.g. `@Test(dependsOnMethods = {"DEV_T21_testMethod3"})`) is considered skipped and Zephyr Scale or Zephyr Squad test cases linked to such tests will have status Skipped (if custom status present) or Blocked.
+- Tests that depends on a failing tests (e.g. `@Test(dependsOnMethods = {"DEV_T21_testMethod3"})`) is considered skipped and Zephyr test cases linked to such tests will have status Skipped (if custom status present) or Blocked.
 - Each test class results in one output file in JUnit xml format in `build/test-results/test` (unless the `@Ignore` annotation is present).

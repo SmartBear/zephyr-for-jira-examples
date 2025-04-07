@@ -1,12 +1,12 @@
 # Junit 4 Integration Example
 
-This is an example project on how to use the integration of Zephyr Scale and Zephyr Squad with automated tests when using JUnit 4. This JUnit mechanism creates a JSON file containing the test results that can then be uploaded to Zephyr Scale or Zephyr Squad after tests are run.
+This is an example project on how to use the integration of Zephyr and Zephyr Essential with automated tests when using JUnit 4. This JUnit mechanism creates a JSON file containing the test results that can then be uploaded to Zephyr after tests are run.
 
 In order to achieve that, you need to annotate the JUnit methods with `@TestCase`.
 
 ## Usage
 
-Firstly, you need to add a dependency to your pom file, to get access to the JUnit listener and the annotations. Note that although the library is named `zephyrscale-junit-integration` it is compatible with both Zephyr Scale and Zephyr Squad:
+Firstly, you need to add a dependency to your pom file, to get access to the JUnit listener and the annotations. Note that although the library is named `zephyrscale-junit-integration` it is compatible with both Zephyr and Zephyr Essential:
 
 ```
 <dependencies>
@@ -20,7 +20,7 @@ Firstly, you need to add a dependency to your pom file, to get access to the JUn
 ```
 
 Also, you'll need to register the JUnit Listener. This listener is responsible for generating the correct JSON
-output file needed for uploading to Zephyr Scale or Zephyr Squad.
+output file needed for uploading to Zephyr.
 
 ```
 <build>
@@ -44,9 +44,9 @@ output file needed for uploading to Zephyr Scale or Zephyr Squad.
 
 The next step is to annotate your JUnit tests with @TestCase.
 
-The @TestCase(key = "JQA-T1") annotation maps the test method to an existing test case in Zephyr Scale or Zephyr Squad, by matching its key.
+The @TestCase(key = "JQA-T1") annotation maps the test method to an existing test case in Zephyr, by matching its key.
 
-The @TestCase(name = "Sum Two Numbers") annotation adds a pretty name to the test case. This will map this test method to an existing test case in Zephyr Scale or Zephyr Squad, by matching its name. If the test case doesn't exist, then a new one can be automatically created using this name, when the results are uploaded.
+The @TestCase(name = "Sum Two Numbers") annotation adds a pretty name to the test case. This will map this test method to an existing test case in Zephyr, by matching its name. If the test case doesn't exist, then a new one can be automatically created using this name, when the results are uploaded.
 
 ```
 public class CalculatorSumTest {
@@ -82,4 +82,4 @@ public class CalculatorSumTest {
 
 ```
 
-Now, you can run your tests with `mvn test` and the test execution result file will be generated in the same execution folder. Not that the file will be named `zephyrscale_result.json` but it works with both Zephyr Scale and Zephyr Squad.
+Now, you can run your tests with `mvn test` and the test execution result file will be generated in the same execution folder. Not that the file will be named `zephyrscale_result.json` but it works with both Zephyr and Zephyr Essential.

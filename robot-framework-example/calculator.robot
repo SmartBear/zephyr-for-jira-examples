@@ -1,6 +1,6 @@
 
 *** Test Cases ***
-# will match Zephyr Scale test case named Calculator.User can clear the display
+# will match Zephyr test case named Calculator.User can clear the display
 User can clear the display
     Input number    10
     Press operator    +
@@ -9,7 +9,7 @@ User can clear the display
     Display should be empty
 
 *** Test Cases ***
-# will match Zephyr Scale test case with key NET-T1743
+# will match Zephyr test case with key NET-T1743
 NET-T1744 User can calculate with wrong result 
     Input number    1
     Press operator    +
@@ -18,7 +18,7 @@ NET-T1744 User can calculate with wrong result
     Result should be     3
 
 *** Test Cases ***
-# will match Zephyr Scale test case with key NET-T1744
+# will match Zephyr test case with key NET-T1744
 User can calculate two numbers - NET-T1744
     [Template]    Calculate two numbers should pass
     10    +    5    15
