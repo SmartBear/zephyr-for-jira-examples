@@ -5,7 +5,7 @@ then
   echo "Some or all of the parameters are empty";
   echo "Usage: $0 projectKey token"
   echo -e "\t- projectKey jira project key for tests "
-  echo -e "\t- token Public REST API token for Zephyr Scale"
+  echo -e "\t- token Public REST API token for Zephyr"
   exit 1
 fi
 
