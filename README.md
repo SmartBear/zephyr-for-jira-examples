@@ -1,8 +1,8 @@
-# Zephyr Scale and Zephyr Squad examples
+# Zephyr examples for test automation
 
-This repository contains a series of sub-directories with examples on how to integrate automated tests using different test frameworks and languages with Zephyr Scale or Zephyr Squad. Please, refer to each individual sub-directory according to your needs.
+This repository contains a series of sub-directories with examples on how to integrate automated tests using different test frameworks and languages with Zephyr or Zephyr Essential. Please, refer to each individual sub-directory according to your needs.
 
-These examples show how to configure several different testing frameworks in order to produce an output that is compatible with Zephyr Scale and Zephyr Squad. This output file is then uploaded to Zephyr Scale or Zephyr Squad so that all test results can be visualized within these tools, including when generating reports or creating Jira gadgets.
+These examples show how to configure several different testing frameworks in order to produce an output that is compatible with Zephyr. This output file is then uploaded to Zephyr so that all test results can be visualized within these tools, including when generating reports or creating Jira gadgets.
 
 Each sub-directory contains the example code and a README file with step-by-step instructions. Please, refer to these README files for more information on each individual testing framework.
 
